@@ -16,10 +16,9 @@ p {
 
 .page-wrapper {
   display: grid;
-  width: 100%;
   grid-template-columns: repeat(8, 1fr);
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px; }
+  width: 100%; }
   @media only screen and (min-width: 650px) {
     .page-wrapper {
       font-size: 16px; } }
@@ -40,11 +39,11 @@ h3:not([class*="select"]):not([class*="archives"]):not([class*="resources"])::be
   background-image: url("rockPoint.png");
   background-size: 35px 30px;
   display: inline-block;
-  width: 35px;
   height: 30px;
   content: "";
   margin-left: -35px;
-  margin-right: 2vw; }
+  margin-right: 2vw;
+  width: 35px; }
 
 .intro {
   grid-column: 1/6;
@@ -55,8 +54,8 @@ h3:not([class*="select"]):not([class*="archives"]):not([class*="resources"])::be
       grid-column: 1/7; } }
   .intro h1 {
     font-size: 1.6em;
-    text-align: center;
-    font-family: 'Cinzel', serif; }
+    font-family: 'Cinzel', serif;
+    text-align: center; }
     @media only screen and (min-width: 650px) {
       .intro h1 {
         font-size: 2.7em; } }
@@ -81,30 +80,30 @@ h3:not([class*="select"]):not([class*="archives"]):not([class*="resources"])::be
         padding-left: 14.5em; } }
   @media only screen and (min-width: 1200px) {
     .intro .summary::before {
+      content: "";
       background-image: url(images/buddha.png);
       background-size: 300px 300px;
       display: inline-block;
-      width: 300px;
       height: 300px;
-      content: "";
+      left: 7vw;
       position: absolute;
       top: 110px;
-      left: 7vw; } }
+      width: 300px; } }
   @media only screen and (min-width: 650px) {
     .intro .summary > p {
       display: block;
-      width: 60%;
-      margin: auto; } }
+      margin: auto;
+      width: 60%; } }
   @media only screen and (min-width: 1200px) {
     .intro .summary > p {
-      width: 25%;
-      margin: auto 0 auto 34vw; } }
+      margin: auto 0 auto 34vw;
+      width: 25%; } }
   .intro .summary > p:nth-child(2) {
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: -10px 0 0 35%;
+    border: 2px solid #7d5642;
+    border-radius: 15px 50px;
     padding: 20px;
-    max-width: 100px; }
+    width: auto;
+    height: auto; }
     @media only screen and (min-width: 650px) {
       .intro .summary > p:nth-child(2) {
         margin: 10px 0 0 45%;
@@ -166,7 +165,7 @@ footer a:link {
 @media only screen and (min-width: 1200px) {
   .main::before {
     background-image: url(images/croppedBonsai.png);
-    background-size: 140px 140px;
+    background-size: 1px 140px;
     display: block;
     width: 140px;
     height: 140px;
@@ -184,8 +183,9 @@ footer a:link {
   text-align: center;
   background-color: rgba(125, 86, 66, 0.8); }
   .sidebar h3 {
-    margin-left: 35px;
-    font-size: 2em; }
+    margin-left: 0px;
+    font-size: 2em;
+    padding-inline-start: 0px; }
   @media only screen and (min-width: 650px) {
     .sidebar {
       grid-column: 6/9; } }
@@ -212,11 +212,11 @@ footer a:link {
   .sidebar .design-selection::before {
     background-image: url(images/croppedBonsai.png);
     background-size: 100px 100px;
-    display: block;
-    width: 100px;
-    height: 100px;
     content: "";
-    margin: 20px auto auto 10vw; }
+    display: block;
+    height: 100px;
+    margin: 20px auto auto 10vw;
+    width: 100px; }
     @media only screen and (min-width: 650px) {
       .sidebar .design-selection::before {
         margin-left: 15vw; } }
@@ -246,6 +246,7 @@ footer {
     margin: 0 20px 0 20px; }
 
 ul {
-  list-style-type: none; }
+  list-style-type: none;
+  padding-inline-start: 0px; }
 
 /*# sourceMappingURL=main.css.map */

@@ -5,6 +5,7 @@
 $mid-bp: 650px;
 $large-bp: 1200px;
 $one_px_black_border: 1px solid black;
+$two_px_brown_border: 2px solid #7d5642;
 
 $coloruno: #2a2922;
 $colordos: #506d2f;
@@ -20,8 +21,6 @@ $l: larger;
 
 
 
-
-
 body {
     background: rgba(80, 109, 47, 0.6);
     box-sizing: border-box;
@@ -32,6 +31,7 @@ body {
 h2, h3 {
     color: $coloruno;
     font-family: 'Tangerine', cursive;
+
 }
 
 p {
@@ -40,11 +40,9 @@ p {
 
 .page-wrapper {
     display: grid;
-    width: 100%;
     grid-template-columns: repeat(8, 1fr);
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-
+    width: 100%;
     @media only screen and (min-width: $mid-bp) {
         font-size: 16px;
     }
@@ -52,6 +50,7 @@ p {
 
 h3 {
     text-align: center;
+
 }
 
 h3:not([class*="select"]):not([class*="archives"]):not([class*="resources"]) {
@@ -70,11 +69,11 @@ h3:not([class*="select"]):not([class*="archives"]):not([class*="resources"])::be
     background-image: url('rockPoint.png');
     background-size: 35px 30px;
     display: inline-block;
-    width: 35px;
     height: 30px;
     content:"";
     margin-left: -35px;
     margin-right: 2vw;
+    width: 35px;
 }
 //-------------------------------------TEXT SETTING---------------------------
 .intro {
@@ -91,8 +90,8 @@ h3:not([class*="select"]):not([class*="archives"]):not([class*="resources"])::be
 
     h1 {
         font-size: 1.6em;
-        text-align: center;
         font-family: 'Cinzel', serif;
+        text-align: center;
 
         @media only screen and (min-width: $mid-bp) {
             font-size: 2.7em;
@@ -125,37 +124,39 @@ h3:not([class*="select"]):not([class*="archives"]):not([class*="resources"])::be
 
     .summary::before {
         @media only screen and (min-width: $large-bp) {
+            content:"";
             background-image: url(images/buddha.png);
             background-size: 300px 300px;
             display: inline-block;
-            width: 300px;
             height: 300px;
-            content:"";
+            left: 7vw;
             position: absolute;
             top: 110px;
-            left: 7vw;
+            width: 300px;
         }
     }
 
     .summary > p{
         @media only screen and (min-width: $mid-bp) {
             display: block;
-            width: 60%;
             margin: auto;
+            width: 60%;
         }
 
         @media only screen and (min-width: $large-bp) {
-            width: 25%;
             margin: auto 0 auto 34vw;
+            width: 25%;
         }
     }
 
     .summary > p:nth-child(2) {
-        border: $one_px_black_border;
-        border-radius: 10px;
-        margin: -10px 0 0 35%;
+        border: $two_px_brown_border;
+        border-radius: 15px 50px;
         padding: 20px;
-        max-width: 100px;
+        width: auto;
+        height: auto;
+//        margin: -10px 0 0 35%;
+//        max-width: 100px;
 
         @media only screen and (min-width: $mid-bp) {
             margin: 10px 0 0 45%;
@@ -253,7 +254,7 @@ footer a:link {
 .main::before {
     @media only screen and (min-width: $large-bp) {
         background-image: url(images/croppedBonsai.png);
-        background-size: 140px 140px;
+        background-size: 1px 140px;
         display: block;
         width: 140px;
         height: 140px;
@@ -277,8 +278,9 @@ footer a:link {
     background-color: rgba(125, 86, 66, 0.8);
 
     h3 {
-        margin-left: 35px;
+        margin-left: 0px;
         font-size: 2em;
+        padding-inline-start: 0px;
     }
 
     @media only screen and (min-width: $mid-bp) {
@@ -315,11 +317,11 @@ footer a:link {
     .design-selection::before {
         background-image: url(images/croppedBonsai.png);
         background-size: 100px 100px;
-        display: block;
-        width: 100px;
-        height: 100px;
         content:"";
+        display: block;
+        height: 100px;
         margin: 20px auto auto 10vw;
+        width: 100px;
 
         @media only screen and (min-width: $mid-bp) {
             margin-left: 15vw;
@@ -360,4 +362,5 @@ footer {
 
 ul {
     list-style-type: none;
+    padding-inline-start: 0px;
 }
